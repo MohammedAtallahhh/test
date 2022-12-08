@@ -8,7 +8,7 @@ function App() {
 
   const text = () =>
     `0${Math.floor(value / 60)}:${
-      value % 60 < 10 ? value % 10 : 0 + (value % 60)
+      value % 60 > 9 ? value % 10 : "0" + (value % 60)
     }`;
 
   useEffect(() => {
